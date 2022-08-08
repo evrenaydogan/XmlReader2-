@@ -157,21 +157,48 @@ namespace XmlReader2
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            var path = @"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\Deneme.xml";
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Models.Product>), new XmlRootAttribute("Products"));
-            StreamReader stringReader = new StreamReader(path);
+            //var path = @"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\Deneme.xml";
+            //XmlSerializer serializer = new XmlSerializer(typeof(List<Models.Product>), new XmlRootAttribute("Products"));
+            //StreamReader stringReader = new StreamReader(path);
 
-            List<Models.Product> productList = (List<Models.Product>)serializer.Deserialize(stringReader);
+            //List<Models.Product> productList = (List<Models.Product>)serializer.Deserialize(stringReader);
 
         }
 
         private void simpleButton6_Click(object sender, EventArgs e)
         {
             //var path = @"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\1-Modul_Kisa_Doors.xml";
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Models.DOORS>), new XmlRootAttribute("PROJECT"));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Models.PROJECT>), new XmlRootAttribute("PROJECT"));
             StreamReader streamReader = new StreamReader(@"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\Deneme2.xml");
 
-            List<Models.DOORS> doorslist = (List<Models.DOORS>)serializer.Deserialize(streamReader);
+            List<Models.PROJECT> doorslist = (List<Models.PROJECT>)serializer.Deserialize(streamReader);
+        }
+
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Models.PROJECT));
+            StreamReader streamReader = new StreamReader(@"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\1-Modul.xml");
+
+            Models.PROJECT doorslist = (Models.PROJECT)serializer.Deserialize(streamReader);
+        }
+
+        private void simpleButton9_Click(object sender, EventArgs e)
+        {
+            var path = @"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\1-Modul.xml";
+            StreamReader stringReader = new StreamReader(path);
+            var xmlString = stringReader.ReadToEnd();
+            XmlSerializer serializer = new XmlSerializer(typeof(ModelsDeneme.PROJECT));
+
+            using (StringReader reader = new StringReader(xmlString))
+            {
+                var sonuc = (ModelsDeneme.PROJECT)serializer.Deserialize(reader);
+            }
+
+
+            //XmlSerializer serializer = new XmlSerializer(typeof(Models.PROJECT));
+            //StreamReader streamReader = new StreamReader(@"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\1-Modul.xml");
+
+            //Models.PROJECT doorslist = (Models.PROJECT)serializer.Deserialize(streamReader);
         }
     }
 }

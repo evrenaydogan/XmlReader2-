@@ -36,6 +36,8 @@ namespace XmlReader2
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -100,11 +102,31 @@ namespace XmlReader2
             this.simpleButton7.TabIndex = 6;
             this.simpleButton7.Text = "Foreach / XML Child Node";
             // 
+            // simpleButton8
+            // 
+            this.simpleButton8.Location = new System.Drawing.Point(252, 110);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(157, 23);
+            this.simpleButton8.TabIndex = 7;
+            this.simpleButton8.Text = "Foreach / XML Child Node";
+            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
+            // 
+            // simpleButton9
+            // 
+            this.simpleButton9.Location = new System.Drawing.Point(252, 152);
+            this.simpleButton9.Name = "simpleButton9";
+            this.simpleButton9.Size = new System.Drawing.Size(157, 23);
+            this.simpleButton9.TabIndex = 8;
+            this.simpleButton9.Text = "Foreach / XML Child Node";
+            this.simpleButton9.Click += new System.EventHandler(this.simpleButton9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.simpleButton9);
+            this.Controls.Add(this.simpleButton8);
             this.Controls.Add(this.simpleButton7);
             this.Controls.Add(this.simpleButton6);
             this.Controls.Add(this.simpleButton5);
@@ -127,6 +149,8 @@ namespace XmlReader2
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.SimpleButton simpleButton9;
     }
 }
 
