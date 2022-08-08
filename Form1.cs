@@ -138,12 +138,12 @@ namespace XmlReader2
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Models.Project project = new Models.Project();
+            //Models.Project project = new Models.Project();
 
-            foreach (var prop in project.GetType().GetProperties())
-            {
-                MessageBox.Show(prop.Name.ToString());
-            }
+            //foreach (var prop in project.GetType().GetProperties())
+            //{
+            //    MessageBox.Show(prop.Name.ToString());
+            //}
 
         }
 
@@ -168,10 +168,10 @@ namespace XmlReader2
         private void simpleButton6_Click(object sender, EventArgs e)
         {
             //var path = @"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\1-Modul_Kisa_Doors.xml";
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Models.Doors3>), new XmlRootAttribute("PROJECTS"));
-            StreamReader streamReader = new StreamReader(@"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\Deneme4.xml");
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Models.DOORS>), new XmlRootAttribute("PROJECT"));
+            StreamReader streamReader = new StreamReader(@"C:\Users\BitegKullanici1\Desktop\Adeko XML Örnek ve Açıklamaları\Örnek 1\Deneme2.xml");
 
-            List<Models.Doors3> doorslist = (List<Models.Doors3>)serializer.Deserialize(streamReader);
+            List<Models.DOORS> doorslist = (List<Models.DOORS>)serializer.Deserialize(streamReader);
         }
     }
 }

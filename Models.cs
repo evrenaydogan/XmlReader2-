@@ -10,11 +10,11 @@ namespace XmlReader2
 {
     public class Models
     {
-        public class Project
+        public class PROJECT
         {
             public string UNITS { get; set;}
 
-            public string DOORS { get; set;}
+            public DOORS DOORS { get; set;}
 
             public string HANDLES { get; set;}
 
@@ -91,17 +91,17 @@ namespace XmlReader2
             public decimal Quantity { get; set; }
         }
 
-        public class Doors3
+        public class DOORS
         {
-            public string[] GROUP { get; set; }
+            public string GROUP { get; set; }
 
-            public string[] CODE { get; set; }
+            public string CODE { get; set; }
 
-            public string[] TYPE { get; set; }
+            public string TYPE { get; set; }
 
         }
 
-        public class Doors
+        public class DOOR3
         {
             public string Group { get; set; }
 
